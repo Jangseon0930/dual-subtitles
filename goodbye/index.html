@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>이중자막을 지우셨네요</title>
+<meta name="description" content="이중자막을 지운 이유를 알려주세요. 한 줄이면 충분합니다.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="../icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap">
+
+<style>
+  :root {
+    --bg:     #101211;
+    --panel:  #181B1A;
+    --raised: #1F2321;
+    --ink:    #F0EFEA;
+    --dim:    #A3A9A4;
+    --faint:  #6E756F;
+    --rule:   #282D2A;
+    --amber:  #FFD88A;
+    --sans: "IBM Plex Sans KR", -apple-system, BlinkMacSystemFont,
+            "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1.15rem 4rem;
+  }
+
+  main { width: 100%; max-width: 32rem; }
+
+  .langs {
+    display: flex; gap: 2px; margin: 0 0 1.75rem;
+    background: var(--panel); padding: 3px; border-radius: 7px; width: fit-content;
+  }
+  .langs button {
+    border: 0; background: none; cursor: pointer; font: inherit;
+    font-size: 0.78rem; color: var(--faint);
+    padding: 0.35em 0.8em; border-radius: 5px;
+  }
+  .langs button[aria-pressed="true"] { background: var(--raised); color: var(--ink); }
+
+  [data-lang] { display: none; }
+  [data-lang].is-on { display: block; }
+
+  h1 {
+    margin: 0 0 0.7rem;
+    font-size: clamp(1.5rem, 4.5vw, 1.95rem);
+    font-weight: 700; letter-spacing: -0.025em; line-height: 1.25;
+    text-wrap: balance;
+  }
+  .lede { margin: 0 0 1.75rem; color: var(--dim); }
+
+  .reasons { display: flex; flex-direction: column; gap: 0.6rem; margin: 0 0 1.75rem; }
+
+  .reason {
+    display: block;
+    padding: 0.85rem 1.1rem;
+    background: var(--panel);
+    border: 1px solid var(--rule);
+    border-radius: 9px;
+    color: var(--ink);
+    text-decoration: none;
+    font-size: 0.97rem;
+  }
+  .reason:hover { border-color: var(--amber); }
+  .reason:focus-visible { outline: 2px solid var(--amber); outline-offset: 3px; }
+  .reason span { display: block; color: var(--faint); font-size: 0.85rem; margin-top: 0.15rem; }
+
+  .foot { margin: 0; color: var(--faint); font-size: 0.88rem; }
+  .foot a { color: var(--amber); text-underline-offset: 3px; }
+</style>
+</head>
+<body>
+<main>
+
+  <div class="langs" role="group" aria-label="Language">
+    <button type="button" data-set="ko" aria-pressed="true">한국어</button>
+    <button type="button" data-set="en" aria-pressed="false">EN</button>
+  </div>
+
+  <div data-lang="ko" class="is-on">
+    <h1>이중자막을 지우셨네요</h1>
+    <p class="lede">
+      괜찮습니다. 다만 <strong>왜 지우셨는지</strong> 한 줄만 알려주시면 다음 버전이
+      나아집니다. 아래를 누르면 메일 앱이 열리고, 이유는 이미 적혀 있습니다.
+      그냥 보내기만 누르셔도 됩니다.
+    </p>
+
+    <div class="reasons">
+      <a class="reason" href="mailto:novalaps.kr@gmail.com?subject=%EC%9D%B4%EC%A4%91%EC%9E%90%EB%A7%89%20%EC%82%AD%EC%A0%9C%20%EC%9D%B4%EC%9C%A0%20%E2%80%94%20%EC%9E%90%EB%A7%89%EC%9D%B4%20%EC%95%88%20%EB%82%98%EC%99%94%EB%8B%A4&body=%0A%0A(%EC%96%B4%EB%96%A4%20%EC%98%81%EC%83%81%EC%9D%B4%EC%97%88%EB%8A%94%EC%A7%80%20%EC%A3%BC%EC%86%8C%EB%A5%BC%20%EB%B6%99%EC%97%AC%EC%A3%BC%EC%8B%9C%EB%A9%B4%20%EB%B0%94%EB%A1%9C%20%EA%B3%A0%EC%B9%A0%20%EC%88%98%20%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4)">
+        자막이 안 나왔다
+        <span>이게 제일 흔한 고장입니다. 영상 주소를 같이 주시면 바로 고칩니다</span>
+      </a>
+      <a class="reason" href="mailto:novalaps.kr@gmail.com?subject=%EC%9D%B4%EC%A4%91%EC%9E%90%EB%A7%89%20%EC%82%AD%EC%A0%9C%20%EC%9D%B4%EC%9C%A0%20%E2%80%94%20%EB%9C%BB%EC%9D%B4%20%EC%9D%B4%EC%83%81%ED%96%88%EB%8B%A4&body=%0A%0A(%EC%96%B4%EB%96%A4%20%EB%8B%A8%EC%96%B4%EC%98%80%EB%8A%94%EC%A7%80%20%EC%A0%81%EC%96%B4%EC%A3%BC%EC%8B%9C%EB%A9%B4%20%EB%8F%84%EC%9B%80%EC%9D%B4%20%EB%90%A9%EB%8B%88%EB%8B%A4)">
+        단어 뜻이 이상했다
+        <span>어떤 단어였는지 적어주시면 그 단어부터 고칩니다</span>
+      </a>
+      <a class="reason" href="mailto:novalaps.kr@gmail.com?subject=%EC%9D%B4%EC%A4%91%EC%9E%90%EB%A7%89%20%EC%82%AD%EC%A0%9C%20%EC%9D%B4%EC%9C%A0%20%E2%80%94%20%EA%B7%B8%EB%83%A5%20%EC%95%88%20%EC%93%B0%EA%B2%8C%20%EB%90%90%EB%8B%A4">
+        그냥 안 쓰게 됐다
+        <span>이것도 답입니다. 이유가 없어도 보내주세요</span>
+      </a>
+      <a class="reason" href="mailto:novalaps.kr@gmail.com?subject=%EC%9D%B4%EC%A4%91%EC%9E%90%EB%A7%89%20%EC%82%AD%EC%A0%9C%20%EC%9D%B4%EC%9C%A0">
+        다른 이유
+        <span>직접 적어주세요</span>
+      </a>
+    </div>
+
+    <p class="foot">
+      답하지 않으셔도 됩니다. 이 페이지는 아무것도 저장하지 않고, 메일을 보내지
+      않으시면 저희는 누가 지웠는지 알 수 없습니다.
+      <a href="../">이중자막에 대해</a>
+    </p>
+  </div>
+
+  <div data-lang="en">
+    <h1>You uninstalled Dual Subtitles</h1>
+    <p class="lede">
+      That's alright. If you have a moment, <strong>telling me why</strong> makes the
+      next version better. Clicking below opens your mail app with the reason already
+      filled in — you can just hit send.
+    </p>
+
+    <div class="reasons">
+      <a class="reason" href="mailto:novalaps.kr@gmail.com?subject=Uninstall%20reason%20%E2%80%94%20subtitles%20did%20not%20appear&body=%0A%0A(If%20you%20paste%20the%20video%20URL%2C%20I%20can%20fix%20it%20directly)">
+        Subtitles didn't appear
+        <span>The most common failure. A video URL lets me fix it directly</span>
+      </a>
+      <a class="reason" href="mailto:novalaps.kr@gmail.com?subject=Uninstall%20reason%20%E2%80%94%20the%20meanings%20were%20wrong&body=%0A%0A(Which%20word%3F)">
+        The word meanings were wrong
+        <span>Tell me which word and I'll start there</span>
+      </a>
+      <a class="reason" href="mailto:novalaps.kr@gmail.com?subject=Uninstall%20reason%20%E2%80%94%20just%20stopped%20using%20it">
+        I just stopped using it
+        <span>That's an answer too. Send it even with nothing else</span>
+      </a>
+      <a class="reason" href="mailto:novalaps.kr@gmail.com?subject=Uninstall%20reason">
+        Something else
+        <span>Tell me in your own words</span>
+      </a>
+    </div>
+
+    <p class="foot">
+      You don't have to answer. This page stores nothing, and unless you send the mail
+      I have no way of knowing who uninstalled.
+      <a href="../">About Dual Subtitles</a>
+    </p>
+  </div>
+
+</main>
+
+<script>
+  const blocks = document.querySelectorAll("[data-lang]");
+  const buttons = document.querySelectorAll(".langs button");
+
+  function show(lang) {
+    for (const block of blocks) block.classList.toggle("is-on", block.dataset.lang === lang);
+    for (const button of buttons) button.setAttribute("aria-pressed", String(button.dataset.set === lang));
+    document.documentElement.lang = lang;
+  }
+
+  for (const button of buttons) button.addEventListener("click", () => show(button.dataset.set));
+  show(navigator.language?.startsWith("ko") ? "ko" : "en");
+</script>
+
+</body>
+</html>
